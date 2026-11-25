@@ -19,32 +19,20 @@ body {
     padding: 0 15px;
 }
 
-/* هدر */
+/* هدر و بنر بزرگ */
 .main-header {
-    background: linear-gradient(135deg, #1a202c, #0f172a);
-    padding: 20px 0;
-    text-align: center;
-    border-bottom: 2px solid #b91c1c;
+    width: 100%;
     margin-bottom: 30px;
+    text-align: center;
+    background-color: #000;
 }
 
-.header-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
-.logo {
-    width: 90px;
-    height: 90px;
-    object-fit: contain;
-    border-radius: 50%;
-}
-
-.main-header h1 {
-    font-size: 1.5rem;
-    color: #f8fafc;
+.header-banner {
+    width: 100%;
+    height: auto;
+    max-height: 450px; /* جلوگیری از خیلی بلند شدن در دسکتاپ */
+    object-fit: cover;
+    display: block;
 }
 
 /* کارت‌ها */
@@ -70,6 +58,7 @@ body {
     border-radius: 10px;
     margin-bottom: 20px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    display: block;
 }
 
 .tavassol {
@@ -113,37 +102,52 @@ hr {
 
 .news-item h3 {
     color: #fca5a5;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     font-size: 1.1rem;
+    text-align: right;
+}
+
+.news-content-flex {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.news-profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ef4444;
+    flex-shrink: 0;
+}
+
+.news-text {
+    flex-grow: 1;
 }
 
 .quote {
     font-style: italic;
     color: #d1d5db;
     margin-bottom: 10px;
+    font-size: 0.95rem;
+    text-align: justify;
 }
 
 .author {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: #9ca3af;
     text-align: left;
+    margin-bottom: 10px;
 }
 
 .dua {
-    margin-top: 15px;
     color: #34d399;
     font-weight: bold;
+    font-size: 0.95rem;
 }
 
 /* بخش خیریه */
-.group-photo {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    max-height: 400px;
-    object-fit: cover;
-}
-
 .charity-text {
     text-align: justify;
     font-size: 1.05rem;
@@ -162,10 +166,25 @@ footer {
     border-top: 2px solid #b91c1c;
 }
 
+/* استایل لوگو در فوتر */
+.footer-logo-container {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.footer-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
 footer h3 {
     text-align: center;
     margin-bottom: 20px;
     color: #f8fafc;
+    font-size: 1.2rem;
 }
 
 .links-grid {
@@ -216,13 +235,25 @@ footer h3 {
 
 /* ریسپانسیو برای موبایل */
 @media (max-width: 600px) {
-    .main-header h1 {
-        font-size: 1.2rem;
-    }
     .card {
         padding: 15px;
     }
     .info-box p {
         font-size: 0.9rem;
+    }
+    .news-content-flex {
+        flex-direction: column; /* عکس بالای متن در موبایل */
+        align-items: center;
+    }
+    .news-item h3 {
+        text-align: center;
+    }
+    .news-profile-img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+    }
+    .author {
+        text-align: center;
     }
 }
