@@ -1,0 +1,228 @@
+/* تنظیمات پایه */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Vazirmatn', sans-serif;
+}
+
+body {
+    background-color: #0d1117; /* پس‌زمینه تیره */
+    color: #e6edf3;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* هدر */
+.main-header {
+    background: linear-gradient(135deg, #1a202c, #0f172a);
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 2px solid #b91c1c;
+    margin-bottom: 30px;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.main-header h1 {
+    font-size: 1.5rem;
+    color: #f8fafc;
+}
+
+/* کارت‌ها */
+.card {
+    background-color: #161b22;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    border: 1px solid #30363d;
+}
+
+.card h2 {
+    color: #f87171;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* بخش مراسم هفتگی */
+.event-banner img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.tavassol {
+    text-align: center;
+    color: #60a5fa;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.info-box {
+    background-color: #0d1117;
+    padding: 15px;
+    border-radius: 10px;
+    border-right: 4px solid #3b82f6;
+}
+
+.info-box p {
+    margin: 8px 0;
+    font-size: 1rem;
+}
+
+.info-box i {
+    color: #9ca3af;
+    margin-left: 8px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #30363d;
+    margin: 10px 0;
+}
+
+/* بخش اخبار */
+.news-item {
+    background-color: #0d1117;
+    padding: 15px;
+    border-radius: 10px;
+    border-right: 4px solid #ef4444;
+}
+
+.news-item h3 {
+    color: #fca5a5;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.quote {
+    font-style: italic;
+    color: #d1d5db;
+    margin-bottom: 10px;
+}
+
+.author {
+    font-size: 0.9rem;
+    color: #9ca3af;
+    text-align: left;
+}
+
+.dua {
+    margin-top: 15px;
+    color: #34d399;
+    font-weight: bold;
+}
+
+/* بخش خیریه */
+.group-photo {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.charity-text {
+    text-align: justify;
+    font-size: 1.05rem;
+}
+
+.highlight {
+    color: #fbbf24;
+    font-weight: bold;
+}
+
+/* فوتر و لینک‌ها */
+footer {
+    background-color: #0f172a;
+    padding: 30px 0;
+    margin-top: 40px;
+    border-top: 2px solid #b91c1c;
+}
+
+footer h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #f8fafc;
+}
+
+.links-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.eitaa-btn {
+    background-color: #1e3a8a;
+    color: white;
+    border: 1px solid #3b82f6;
+}
+
+.eitaa-btn:hover {
+    background-color: #3b82f6;
+}
+
+.map-btn {
+    background-color: #065f46;
+    color: white;
+    border: 1px solid #10b981;
+}
+
+.map-btn:hover {
+    background-color: #10b981;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+/* ریسپانسیو برای موبایل */
+@media (max-width: 600px) {
+    .main-header h1 {
+        font-size: 1.2rem;
+    }
+    .card {
+        padding: 15px;
+    }
+    .info-box p {
+        font-size: 0.9rem;
+    }
+}
